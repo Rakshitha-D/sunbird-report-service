@@ -4,7 +4,9 @@
   "scripts": {
     "start": "cross-env DEBUG=* node ./bin/www",
     "dev": "cross-env NODE_ENV=development DEBUG=* nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "engines": {
     "node": ">=7.8.0"
@@ -25,10 +27,9 @@
     "cookie-parser": "~1.4.4",
     "cross-env": "^7.0.3",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.17.3",
     "express-promise-router": "^4.1.1",
     "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
@@ -37,10 +38,11 @@
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sb_api_interceptor": "file:libs/sb_api_interceptor",
-    "sequelize": "^6.19.0",
+    "sequelize": "^6.29.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "eslint": "^8.57.1",
     "nodemon": "^2.0.16",
     "sequelize-cli": "^6.4.1"
   }
